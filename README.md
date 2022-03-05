@@ -13,3 +13,7 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+
+Need to be using Node v 16
+
+❯ npx hardhat run scripts/deploy.js --network localhost
