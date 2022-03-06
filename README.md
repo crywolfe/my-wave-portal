@@ -17,3 +17,6 @@ npx hardhat help
 Need to be using Node v 16
 
 ❯ npx hardhat run scripts/deploy.js --network localhost
+
+Front-end found here. Using Replit
+https://replit.com/@crywolfe/waveportal-starter-project#src/App.jsx
