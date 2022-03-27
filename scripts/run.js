@@ -18,8 +18,8 @@ const main = async () => {
   waveCount = await waveContract.getTotalWaves();
   console.log(waveCount.toNumber());
 
-  let waveTxn = await waveContract.wave("A MESSAGE");
-  await waveTxn.wait();
+  // let waveTxn = await waveContract.wave("A MESSAGE");
+  // await waveTxn.wait();
 
   contractBalance = await hre.ethers.provider.getBalance(
     waveContract.address
@@ -29,9 +29,11 @@ const main = async () => {
     hre.ethers.utils.formatEther(contractBalance)
   );
 
-  // const [_, randomPerson] = await hre.ethers.getSigners();
-  // waveTxn = await waveContract.connect(randomPerson).wave("Random's message");
-  // await waveTxn.wait();
+  const waveTxn = await waveContract.wave("This is wave #1");
+  await waveTxn.wait();
+
+  const waveTxn2 = await waveContract.wave("This is wave #2");
+  await waveTxn2.wait();
 
   let allWaves = await waveContract.getAllWaves();
   console.log(allWaves);
